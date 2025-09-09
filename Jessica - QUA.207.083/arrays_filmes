@@ -1,0 +1,23 @@
+//Criando um array de filmes com 10 títulos
+let filmes = ['Harry Potter','Matrix','Senhor dos Anéis','Senna','Se eu fosse você','Diário de uma Paixão',
+    'Os Vingadores','Gladiador','Missão Impossível','Paixão de Cristo'];
+console.log('Lista de Filmes:', filmes);
+
+// Exibindo o primeiro e último filme da lista
+let primeirofilme = filmes[0];
+let ultimoFilme = filmes[filmes.length - 1];
+console.log('Primeiro Filme da Lista:', primeirofilme);
+console.log('Último Filme da Lista:', ultimoFilme);
+
+// Substituindo o terceiro filme da lista
+filmes[2] = 'Guerra nas Estrelas';
+console.log('Resultado da Lista de Filmes após substituição do terceiro filme:', filmes);
+
+// Adicionando um novo filme ao final da lista
+filmes.push('Avatar');
+console.log('Resultado da Lista de Filmes após adicionar um novo filme ao final:', filmes);
+
+// Removendo o primeiro filme da lista
+let primeiroFilme = filmes.shift();
+console.log('Removido Primeiro Filme da lista):', primeiroFilme);
+console.log('Resultado da Lista de Filmes após remover o primeiro filme:', filmes); 

@@ -1,0 +1,37 @@
+let corSemaforo =  "verde";
+
+if (corSemaforo === "verde"){
+    console.log("Siga em frente!");
+} else if (corSemaforo === "amarelo"){
+    console.log("Atenção! Prepare-se para parar");
+}   else if (corSemaforo === "vermelho"){
+        console.log("Pare!");
+} else {
+    console.log("Cor inválida");
+}     
+
+
+/* formas de fazer 3 juntas ou 1 por vez
+=== compara valor
+aparece qual cor foi definida na variavel
+listas ou tuplas = array
+let coresSemaforo = ["verde", "amarelo", "vermelho"];
+console.log(coresSemaforo[0]);
+console.log(coresSemaforo[1]);
+console.log(coresSemaforo[2]);      
+ou
+let verde = "verde";
+let amarelo = "amarelo";
+let vermelho = "vermelho";
+
+let corSemaforo = amarelo;
+
+if (corSemaforo = verde) {
+    console.log("Siga em frente!");
+} else if (corSemaforo = amarelo) {
+    console.log("Atenção! Prepare-se para parar");
+} else if (corSemaforo = vermelho) {
+    console.log("Pare!");
+} else {
+    console.log("Cor inválida");
+}  */
