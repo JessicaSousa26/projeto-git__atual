@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="Imagens/css-3.png"  type="image/png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira Página com CSS </title>
+    <style>
+        /*CSS Interno*/
+        body {
+            font-family: Arial,Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(166, 194, 230);
+        }
+        header {
+            background-color: #af4c7a;
+            color: rgb(143, 224, 141);
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Mundo do CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Página Principal</h2>
+            <p>Este é meu primeiro parágrafo com CSS.</p>
+            <p class="destaque">Este parágrafo tem uma classe especial.</p>
+            <p id="paragrafo-unico">Este parágrafo tem um ID único.</p>
+        </section>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Aqui você aprenderá sobre CSS de forma prática.</p>
+            <div class="caixa">
+                <h3>Caixa de Destaque</h3>
+                <p>Conteúdo dentro de uma caixa especial.</p>
+            </div>
+        </section>
+    </main>  
+    <footer>
+        <p>&copy; 2024 Minha Primeira Página</p>
+    </footer>
+</body>
+</html>

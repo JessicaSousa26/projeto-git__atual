@@ -1,0 +1,107 @@
+body{
+    background-color: #108860;
+    color: #d3d014;    
+}
+h1{
+    font-size: 40px;
+    font-weight: bold;
+     text-align: center;
+}  
+div{
+    background-color: #9d14d3;
+    color: #1310a1;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #000000;
+} 
+span{
+    background-color: #d3146e;
+    color: #14d3b8;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #000000;
+}
+header{
+    background-color: #d35414;
+    color: #14d3b8;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #000000;
+}
+nav li{
+    display: inline-block;
+    background-color: #14d3b8;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #3b2599;
+}   
+nav ul{
+    text-align: center;
+    margin-top: 20px;
+}
+nav a{
+    text-decoration: overline;
+    color: #d61750;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+    border-bottom:2px solid transparent;
+}
+nav a:hover{
+    border-bottom:2px solid #bce01b;
+} 
+main{
+    width: 940px;
+    margin: 0 auto;
+    padding: 20px 0px  20px 20px;
+}  
+.perfil {
+    padding: 30px;
+    border: 2px solid #646161;
+    postition: relative;
+}
+.perfil img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #928b8b;
+    position:absolute;
+    top:60px;
+    left: calc(50%);
+    transform: translateX(-50%); 
+}
+.perfil h2{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 90px;
+    color: #333;
+}
+.perfil p {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #333;
+}
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+form{
+    background-color: #14d3b8;
+    color: #d3146e;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #000000;
+}
+form input, form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição</title>
+</head>
+<body>
+    <!--Primeiro Reset-->
+        <link rel="stylesheet" href="reset.css">
+        <!--Depois nossos estilos-->
+    <link rel="stylesheet" href="style.css"> 
+
+<!--CSS Interno-->
+<h1 style="color: rgba(174, 0, 255, 0.582); 
+           font-size: 30px; 
+           background-color: #14d3b8;
+           text-align: center;
+           margin: 10px;
+           padding: 10px;
+           border: 2px solid #d60bdd;">Formulário de Inscrição</h1><br>
+
+    <form action="#" method="post">
+        
+    <!--Nome-->
+    <label for="nome">Nome completo*:</label><br>
+    <input type="text" id="nome" required><br>
+
+    <!--Email-->
+    <label for="email">E-mail*:</label><br>
+    <input type="email" name="email" id="email" required><br>
+
+    <!--Telefone-->
+    <label for="telefone">Telefone:</label><br>
+    <input type="tel" id="telefone" name="telefone"><br>
+
+    <!--Curso de Interesse-->
+    <label for="curso">Curso de Interesse:</label><br>
+    <select name="curso" id="curso">
+      <option value="">Selecione...</option>
+      <option value="html">HTML Básico</option>
+      <option value="css">CSS Avançado</option>
+      <option value="javascript">JavaScript</option>
+      <option value="bootstrap">Bootstrap</option>
+    </select><br>
+
+    <!--Como soube do curso-->
+    <p>Como soube do curso?</p>
+    <input type="radio" id="amigos" name="origem" value="amigos">
+    <label for="amigos">Amigos</label><br>
+
+    <input type="radio" id="internet" name="origem" value="internet">
+    <label for="internet">Internet</label><br>
+
+    <input type="radio" id="outros" name="origem" value="outros">
+    <label for="outros">Outros</label><br>
+
+    <!--Aceita receber informações-->
+    <input type="checkbox" name="informacoes" id="informacoes">
+    <label for="informacoes">Aceito receber informações por e-mail</label><br><br>
+
+    <!--Botões-->
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
