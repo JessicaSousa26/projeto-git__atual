@@ -1,0 +1,219 @@
+/* Exercicio 1 - Rodapé Estilizado
+Parte 1 - Estilização Geral - Corpo da Página */
+body {
+    background: linear-gradient(135deg,#30F0E9 #606CF0, #577c4c);
+    display: inline-block;
+    color: rgb(74, 41, 192);
+    padding: 10px 15px;
+    text-align: justify
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    border-radius: 12px;
+    margin: 10px;
+}  
+
+h1{
+    color: #6337F0;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Arial Black', Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+h3{
+    color: #0b7dda;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.menu{
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    color: #ea37f0;
+}
+
+.about{
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: justify
+    font-family: 'Arial', sans-serif;
+    color: #ea37f0;
+}
+
+/* Parte 2 - Estilização do Formulário */
+form{
+    background-color: #14d3b8;
+    color: #0ecf38;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #6337F0;
+    }
+
+form input, form textarea{   
+    padding: 10x;
+    margin-bottom:10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+form button:hover{
+    background-color: #0b7dda;
+    align: center;      
+}
+
+/* Parte 3 - Estilização do Rodapé */
+
+footer {
+background-color: #6337F0;
+color: #fff;
+padding: 40px 0px;
+font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.footer-section {
+flex: 1;
+min-width: 250px;
+margin: 20px;
+}
+
+.footer-section h3 {
+color: #00bcd4; /* Cor de destaque */
+margin-bottom: 20px;
+position: relative;
+padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+width: 50px;
+height: 2px;
+background-color: #00bcd4;
+}
+
+.footer-section p, .footer-section ul, .footer-section .contact span {
+font-size: 0.9em;
+line-height: 1.8;
+}
+
+.footer-section ul {
+list-style: squares;
+padding: 0;
+}
+
+.footer-section ul li a {
+color: #fff;
+text-decoration: wavy;
+transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+color: #00bcd4;
+}
+
+.footer-section .contact span {
+display: block;
+margin-bottom: 10px;
+}
+
+.footer-section .contact i {
+margin-right: 10px;
+color: #00bcd4;
+}
+
+.footer-section .socials a {
+display: inline-block;
+width: 35px;
+height: 35px;
+background-color: #555;
+color: #fff;
+text-align: center;
+line-height: 35px;
+border-radius: 50%;
+margin-right: 10px;
+transition: background-color 0.3s ease;
+}
+
+.footer-section .socials a:hover {
+background-color: #00bcd4;
+}
+
+.footer-section .contact-input {
+width: calc(100% - 20px);
+padding: 10px;
+margin-bottom: 10px;
+border: none;
+border-radius: 5px;
+background-color: #333;
+color: #fff;
+}
+
+.footer-section .contact-input::placeholder {
+color: #ccc;
+}
+
+.footer-section .contact-btn {
+background-color: #00bcd4;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.footer-section .contact-btn:hover {
+background-color: #0097a7;
+}
+
+.footer-bottom {
+background-color: #111;
+color: #aaa;
+padding: 20px 0;
+text-align: center;
+font-size: 0.8em;
+margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+.footer-content {
+flex-direction: column;
+align-items: center;
+}
+
+.footer-section {
+margin: 20px 0;
+text-align: center;
+
+}
+.footer-section h3::after {
+left: 50%;
+transform: translateX(-50%);
+
+}
+.footer-section .socials {
+display: flex;
+justify-content: center;
+}
+}

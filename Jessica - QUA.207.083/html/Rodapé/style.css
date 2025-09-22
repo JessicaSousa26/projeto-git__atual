@@ -1,0 +1,23 @@
+footer{
+    background-image: url("praia.jpg");
+    color: #f1f1f1;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+footer div{
+     margin: 10px 0;    
+}
+footer a{
+    color: #e7d210;
+    text-decoration: none;
+}
+@media (max-width: 600px) {
+    footer div{
+    display: block;
+    margin-bottom: 15px;
+}
