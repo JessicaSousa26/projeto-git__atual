@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Usuários Aleatórios</title>
+<style>
+body {
+font-family: Arial;
+background: #f1f8e9;
+text-align: center;
+padding: 20px;
+}
+h1 { color: #33691e; }
+button {
+background: #558b2f;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+}
+#usuarios {
+margin-top: 30px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+.card {
+background: white;
+
+border-radius: 10px;
+padding: 15px;
+width: 180px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+img { border-radius: 50%; }
+</style>
+</head>
+<body>
+<h1>Usuários Aleatórios</h1>
+<button id="btn">Gerar Usuários</button>
+<div id="usuarios"></div>
+<script src="script.js"></script>
+</body>
+</html>
