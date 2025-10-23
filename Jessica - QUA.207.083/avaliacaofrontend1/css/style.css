@@ -1,0 +1,11 @@
+/* Tema escuro + ajustes */
+body { background: #283b7a; }
+.navbar { background: linear-gradient(90deg,#0f1b45,#1b3a73); }
+.card-user { transition: transform .15s ease, box-shadow .15s ease; border: 0; }
+.card-user:hover { transform: scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.required::after { content: " *"; color: #ff6b6b; }
+.badge-role { background: #1f6feb; }
+.footer { color: #9fb3c8; }
+.form-section { background: #0f1530; border-radius: 1rem; }
+.search-section { background: #0f1530; border-radius: 1rem; }
+.pill { border-radius: 999px; }

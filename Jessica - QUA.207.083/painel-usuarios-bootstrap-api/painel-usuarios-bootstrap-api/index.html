@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel de Usuários</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./css/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#"><center>Painel de Usuários</a>
+      <img src="foto_form_cadastro.jpg" class="img-fluid" widht="20px" heithgt="20px"/>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="row g-4 align-items-stretch">
+      <!-- FORM -->
+      <div class="col-12 col-lg-6">
+        <section class="p-4 form-section text-light h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 m-0">Cadastrar Usuário</h2>
+            <span class="badge text-bg-primary">Novo</span>
+          </div>
+          <form id="formUsuario" novalidate class="needs-validation">
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label required" for="nome">Nome completo</label>
+                <input type="text" class="form-control" id="nome" required placeholder="Ex.: Maria da Silva" />
+                <div class="invalid-feedback">Informe o nome completo.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label required" for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" required placeholder="nome@empresa.com" />
+                <div class="invalid-feedback">Informe um e-mail válido.</div>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label required" for="idade">Idade</label>
+                <input type="number" min="14" max="120" class="form-control" id="idade" required />
+                <div class="invalid-feedback">Informe uma idade válida (14–120).</div>
+              </div>
+            <div class="col-md-3">
+               <label class="form-label required" for="cargo">Cargo</label>
+              <select class="form-select" multiple aria-label="Multiple select example" id="cargo" required>
+                <option selected>Selecione um cargo</option>
+                <option value="1">Analista Administrativo</option>
+                <option value="2">Analista de TI</option>
+                <option value="3">Coordenador de Área</option>
+              </select><br>
+              <div class="col-12 d-grid d-md-flex gap-2">
+                <button class="btn btn-success" type="submit">
+                  <span class="me-1">➕</span> Cadastrar Usuário
+                </button>
+                <button class="btn btn-outline-warning" type="button" id="btnLimpar">Limpar</button>
+              </div>
+            </div>
+          </form>
+          <p class="mt-3 small text-secondary">Forma de Uso: dê <strong>duplo clique</strong> em um card para remover.</p>
+        </section>
+      </div>
+
+      <!--Campos de Consulta e Pesquisa-->
+      <div class="col-12 col-lg-6">
+        <section class="p-4 search-section text-light h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 m-0">Consulta e Filtros</h2>
+            <span class="badge text-bg-info">Lista</span>
+          </div>
+          <div class="row g-3 align-items-end">
+            <div class="col-12">
+              <label for="busca" class="form-label">Buscar por nome</label>
+              <input id="busca" type="search" class="form-control" placeholder="Digite o nome do usuário para pesquisar..." />
+            </div>
+            <div class="col-12 d-flex gap-2">
+              <button class="btn btn-outline-danger" id="btnLimparLista">Limpar Lista</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- LISTA DE CARDS -->
+    <section class="mt-4">
+      <div id="lista-usuarios" class="row g-4"></div>
+    </section>
+  </main>
+
+  <!--Rodapé-->
+  <footer class="container py-4 mt-5 footer">
+    <hr class="border-secondary" />
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <center></center><span>&copy; &reg; &trade; 2025 Avaliação de Javascript | Desenvolvido por Grupo de FrontEnd: Danielle, Jéssica Maria de Sousa, Maria do Socorro</span>
+    </div>
+  </footer>
+
+  <!-- Toasts -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+    <div id="liveToast" class="toast text-bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Painel</strong>
+        <small class="text-muted">agora</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="toastMsg">Ação realizada.</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
