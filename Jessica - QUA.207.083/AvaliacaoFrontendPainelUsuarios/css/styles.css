@@ -1,11 +1,83 @@
 /* Tema escuro + ajustes visuais */
-body { background: #0b1020; }
-.navbar { background: linear-gradient(90deg,#0f1b45,#1b3a73); }
-.card-user { transition: transform .15s ease, box-shadow .15s ease; border: 0; }
-.card-user:hover { transform: scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-.required::after { content: " *"; color: #ff6b6b; }
-.badge-role { background: #1f6feb; }
-.footer { color: #9fb3c8; }
-.form-section { background: #0f1530; border-radius: 1rem; }
-.search-section { background: #0f1530; border-radius: 1rem; }
-.pill { border-radius: 999px; }
+body {
+  background-color: #0b1020;
+  color: #dbe4f3;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #0f1b45, #1b3a73);
+  border-bottom: 1px solid #1b3a73;
+}
+
+.card-user {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  background-color: #121a2f;
+  color: #e0e8f0;
+  border-radius: 0.75rem;
+}
+
+.card-user:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card-user .card-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.required::after {
+  content: " *";
+  color: #ff6b6b;
+}
+
+.badge-role {
+  background-color: #1f6feb;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.35em 0.75em;
+  border-radius: 0.5rem;
+}
+
+.footer {
+  color: #9fb3c8;
+  font-size: 0.9rem;
+}
+
+.form-section,
+.search-section {
+  background-color: #0f1530;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.pill {
+  border-radius: 999px;
+}
+
+.invalid-feedback {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.is-invalid {
+  box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.btn-outline-warning,
+.btn-outline-danger,
+.btn-outline-secondary {
+  border-width: 2px;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-danger:hover,
+.btn-outline-secondary:hover {
+  opacity: 0.9;
+}
+
+.toast {
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+}

@@ -1,31 +1,60 @@
-// js/api.js — API demo (ReqRes)
-export const API_BASE = 'https://reqres.in/api';
+const BASE_URL = 'https://jsonplaceholder.typicode.com/users';
 
 export async function apiListarUsuarios() {
-  const [p1, p2] = await Promise.all([
-    fetch(`${API_BASE}/users?per_page=6&page=1`).then(r => r.json()),
-    fetch(`${API_BASE}/users?per_page=6&page=2`).then(r => r.json()),
-  ]);
-  return [...p1.data, ...p2.data].map(u => ({
-    id: u.id,
-    nome: `${u.first_name} ${u.last_name}`,
-    email: u.email,
-    idade: 25 + (u.id % 15),
-    cargo: ['Analista','Dev','Designer','QA','PM'][u.id % 5],
-    avatar: u.avatar,
-  }));
+  try {
+    const response = await fetch(BASE_URL);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+
+    return data.map(u => ({
+      id: u.id,
+      name: u.name,
+      email: u.email,
+      idade: Math.floor(Math.random() * 40) + 20, // JSONPlaceholder não fornece idade
+      cargo: u.company?.bs || 'Desenvolvedor Jr', // usa o campo "bs" como cargo fictício
+      avatar: `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(u.name)}`
+    }));
+  } catch (error) {
+    console.error('Erro ao listar usuários:', error);
+    return [];
+  }
 }
 
-export async function apiCriarUsuario(payload) {
-  const resp = await fetch(`${API_BASE}/users`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  });
-  return resp.json(); // {id, createdAt}
+export async function apiCriarUsuario(dados) {
+  try {
+    const response = await fetch(BASE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: dados.name,
+        email: dados.email,
+        company: { bs: dados.cargo }
+      })
+    });
+
+    const result = await response.json();
+    return {
+      id: result.id || Date.now().toString(),
+      name: dados.name,
+      email: dados.email,
+      idade: dados.idade,
+      cargo: dados.cargo,
+      avatar: `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(dados.name)}`
+    };
+  } catch (error) {
+    console.error('Erro ao criar usuário:', error);
+    return null;
+  }
 }
 
 export async function apiRemoverUsuario(id) {
-  await fetch(`${API_BASE}/users/${id}`, { method: 'DELETE' });
-  return true;
+  try {
+    const response = await fetch(`${BASE_URL}/${id}`, {
+      method: 'DELETE'
+    });
+    return { success: response.ok, id };
+  } catch (error) {
+    console.error('Erro ao remover usuário:', error);
+    return { success: false, id };
+  }
 }
